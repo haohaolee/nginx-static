@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx:alpine
+    restart: on-failure
+    volumes:
+      - ./public:/usr/share/nginx/html
+    ports:
+      - "8000:80"
